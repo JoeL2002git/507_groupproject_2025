@@ -66,13 +66,11 @@ def most_records(conn):
   from {table}
   group by data_source
   order by records desc
-  limit 1;
   """
   df = pd.read_sql(query, conn)
   return df
 records = most_records(conn)
-source = records['data_source'].iloc[0]
-print(f"The data source with the most records is {source}")
+print(f"The following are the sources with their amount of corresponding records {records}")
 
 #Q5. Function to find the number of athletes with missing or invalid names
 def missing_names(conn):
