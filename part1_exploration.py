@@ -99,3 +99,84 @@ def multiple_sources(conn):
   return int(df.loc[0, "num_players"])
 player = multiple_sources(conn)
 print(f"There are {player} athletes with data from multiple sources.")
+
+# 1.3. Metric Discovery and Selection
+
+# Query to find the top 10 most common metrics for Hawkins data 
+sql_toexecute_metrics = """
+SELECT
+    data_source,
+    metric AS metric_name,
+    COUNT(*) AS record_count,
+    MIN(timestamp) AS earliest_date,
+    MAX(timestamp) AS latest_date,
+    COUNT(DISTINCT timestamp) AS unique_dates
+FROM research_experiment_refactor_test
+WHERE data_source = 'hawkins'
+GROUP BY metric
+ORDER BY record_count DESC
+LIMIT 10;
+"""
+
+metrics_response = pd.read_sql(sql_toexecute_metrics, conn)
+metrics_response
+print("Top 10 most common metrics for Hawkins data:")
+print(metrics_response) 
+
+
+# Query to find the top 10 most common metrics for Kinexon data
+sql_toexecute_kinexon_metrics = """
+SELECT
+    data_source,
+    metric AS metric_name,
+    COUNT(*) AS record_count,
+    MIN(timestamp) AS earliest_date,
+    MAX(timestamp) AS latest_date,
+    COUNT(DISTINCT timestamp) AS unique_dates
+FROM research_experiment_refactor_test
+WHERE data_source = 'kinexon'
+GROUP BY metric
+ORDER BY record_count DESC
+LIMIT 10;
+"""
+
+kinexon_metrics_response = pd.read_sql(sql_toexecute_kinexon_metrics, conn)
+kinexon_metrics_response 
+print("Top 10 most common metrics for Kinexon data:")
+print(kinexon_metrics_response)
+
+# Query to find the top 10 most common metrics for Vald data
+sql_toexecute_vald_metrics = """
+SELECT
+    data_source,
+    metric AS metric_name,
+    COUNT(*) AS record_count,
+    MIN(timestamp) AS earliest_date,
+    MAX(timestamp) AS latest_date,
+    COUNT(DISTINCT timestamp) AS unique_dates
+FROM research_experiment_refactor_test
+WHERE data_source = 'Vald'
+GROUP BY metric
+ORDER BY record_count DESC
+LIMIT 10;
+"""
+
+vald_metrics_response = pd.read_sql(sql_toexecute_vald_metrics, conn)
+vald_metrics_response
+print("Top 10 most common metrics for Vald data:")
+print(vald_metrics_response)
+
+# Query to find the number of unique metrics across all data sources
+sql_to_execute_unique_metrics = """
+SELECT
+    COUNT(DISTINCT metric) AS total_unique_metrics,
+    COUNT(DISTINCT CASE WHEN data_source = 'hawkins' THEN metric END) AS hawkins_unique_metrics,
+    COUNT(DISTINCT CASE WHEN data_source = 'kinexon' THEN metric END) AS kinexon_unique_metrics,
+    COUNT(DISTINCT CASE WHEN data_source = 'Vald' THEN metric END) AS vald_unique_metrics
+FROM research_experiment_refactor_test;
+"""
+
+unique_metrics_response = pd.read_sql(sql_to_execute_unique_metrics, conn)
+unique_metrics_response
+print("Number of unique metrics across all data sources:")
+print(unique_metrics_response) 
