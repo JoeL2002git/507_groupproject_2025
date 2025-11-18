@@ -180,3 +180,9 @@ unique_metrics_response = pd.read_sql(sql_to_execute_unique_metrics, conn)
 unique_metrics_response
 print("Number of unique metrics across all data sources:")
 print(unique_metrics_response) 
+
+# 1.4. Metric Selection
+
+# 1. 5 Metrics: Jump Height (m) and Peak Velocity (m/s) from Hawkins dataset, distance_total and accel_load_accum from Kinexon dataset, leftAvgForce/rightAverageForce from Vald dataset
+#     a. Jump Height is commonly assessed in strength and conditioning fields, being used to measure the power of the lower-body and the vertical jump ability. Specifically, it measures the maximum vertical displacement of the center of mass (Nuzzo et al., 2011). 
+#     It is important for athletic performance, because many professional sports organizations (e.g. NFL, NBA, etc.) use it to assess athlete potential, 
