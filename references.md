@@ -1,4 +1,4 @@
-# References for Part 1.3
+# References for Part 1.4 (1-3)
 1. Nuzzo, James L; Anning, Jonathan H; Scharfenberg, Jessica M. The Reliability of Three Devices Used for Measuring Vertical Jump Height. Journal of Strength and Conditioning Research 25(9):p 2580-2590, September 2011. | DOI: 10.1519/JSC.0b013e3181fee650 
 2. Gathercole, Rob J.; Sporer, Ben C.; Stellingwerff, Trent; Sleivert, Gord G.. Comparison of the Capacity of Different Jump and Sprint Field Tests to Detect Neuromuscular Fatigue. Journal of Strength and Conditioning Research 29(9):p 2522-2531, September 2015. | DOI: 10.1519/JSC.0000000000000912
 3. Kons, Rafael L.1; Ache-Dias, Jonathan2; Detanico, Daniele1; Barth, Jonathan1; Dal Pupo, Juliano1. Is Vertical Jump Height an Indicator of Athletes' Power Output in Different Sport Modalities?. Journal of Strength and Conditioning Research 32(3):p 708-715, March 2018. | DOI: 10.1519/JSC.0000000000001817
