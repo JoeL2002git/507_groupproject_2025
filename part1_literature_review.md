@@ -1,5 +1,38 @@
 # 1.4. Metric Selection
 
-# Q1. 5 Metrics: Jump Height (m) and Peak Velocity (m/s) from Hawkins dataset, distance_total and accel_load_accum from Kinexon dataset, leftAvgForce/rightAverageForce from Vald dataset
-    a. Jump Height is commonly assessed in strength and conditioning fields, being used to measure the power of the lower-body and the vertical jump ability. Specifically, it measures the maximum vertical displacement of the center of mass (Nuzzo et al., 2011). 
-    It is important for athletic performance, because many professional sports organizations (e.g. NFL, NBA, etc.) use it to assess athlete potential as well as monitor athlete improvements during training. It's an indicator of neuromuscular function and fatigue, correlating strongly with actions requiring rapid, high-force output like sprinting, changing of direction, and jumping. (Gathercole et al., 2015)
+## Q1. 5 Metrics: Jump Height (m) and Peak Velocity (m/s) from Hawkins dataset, distance_total and accel_load_accum from Kinexon dataset, leftAvgForce/rightAverageForce from Vald dataset
+
+## Q2. Research on 5 Metrics:
+### Jump Height
+    a. Jump height is commonly assessed in strength and conditioning fields, being used to measure the power of the lower-body and the vertical jump ability. Specifically, it measures the maximum vertical displacement of the center of mass. (Nuzzo et al., 2011) 
+    b. It is important for athletic performance, because many professional sports organizations (e.g. NFL, NBA, etc.) use it to assess athlete potential as well as monitor athlete improvements during training. It's an indicator of neuromuscular function and fatigue, correlating strongly with actions requiring rapid, high-force output like sprinting, changing of direction, and jumping. (Gathercole et al., 2015)
+    c. Values of jump height varies differently based on gender or even the type of sport the person plays. The average jump height for a normal male is around 0.4-0.5m, while the average jump height for a normal female is around 0.3-0.4m. The average jump height for a male athlete is 0.6-0.7m, while the average jump height for a female athlete is 0.5-0.6m.
+    d. Existing research suggests that vertical jump height is a significant metric because it shows a strong correlation with and helps indicate an athlete's lower-body propulsive power, which is a crucial underlying factor for performance in both linear speed and agility tests (Kons et al., 2018)
+### Peak Velocity a.k.a Peak Propulsive Velocity
+    a. Peak velocity measures the maximum upward speed achieved during the acceleration/propulsion phase of a ballistic movement (like a jump or loaded squat). It reflects the velocity component of a person's power output. (Bosco et al., 1983)
+    b. It is important to define an athlete's force-velocit, as the velocity of a movement particularly at takeoff or release, is a direct determinant of the final outcome, like jump height. (Bosco et al., 1983)
+    c. Peak Velocity varies greatly depending on specific exercises, person's skill level, and body height. In a jump test, the greater the velocity at takeoff, the greater the height achieved. Values are highly context-dependent (e.g., loaded vs. unloaded).
+    d. Existing research suggests that peak propulsive velocity has a strong mechanical relationship to jump height. Additionally there is a positive correlation in propulsive power and propulsive velocity, especially across elite athletes. (Loturco et al., 2015)
+### Distance Total
+    a. Cumulative distance is the most basic measure of external load and locomotor volume covered by an athlete during a session. (Mujika et al., 2017)
+    b. It is important as it is often used in sports for load planning, periodization, and monitoring chronic fitness levels. It is the work completed and the overall aerobic/metabolic demands of a session training.
+    c. Values of total distance varies differntly based on person, sport, position, and session type. Total distance in elite team sports can differ in range, for example in a soccer match players average around 5-9 miles per game and in a football game receivers and cornerbacks run 1.25 miles per game. It is generally monitored relative to an athlete's average to determine load.
+    d. Existing research shows that cumulative distance is a essential measure of session intensity and duration. (Bradley et al., 2011)
+### Accumulated Acceleration Load
+    a. Accumulated acceleration load total is calculated from the sum of instantaneous accelerations across three axes (X, Y, Z), encompassing changes in speed, impacts, and jumps. It is a key measure of neuromuscular load. (Freitas et al., 2025)
+    b. It's important as it quantifies the intensity of high-impact, eccentric, and quasi-isometric contractions (like deceleration and landing), which are highly fatiguing and associated with tissue damage and injury risk. 
+    c. Values are expressed in arbitrary units and are system-specific, making direct comparison difficult. It is best used for intra-team comparisons (e.g., comparing a player's session load to their weekly average). For example, in college basketball, it was found to be significantly higher against professional opponents.
+    d. Existing research found that accelerometer-based load metrics are a useful approach for monitoring the multifaceted external load in sports like basketball and handball. It is often used in combination with subjective internal load measures (like RPE) for a holistic view of training stress.
+### Left/Right Max Force
+    a. Maximum force, which is the highest force an athlete can generate in a single limb during a static (isometric) strength test, such as a leg extension/curl. Limb Symmetry Index (LSI) is derived by comparing left vs. right.
+    b. It's importanta as maximal force underpins speed, power, and injury resistance. The LSI is crucial for injury screening and rehabilitation monitoring, as significant asymmetries can be a risk factor for subsequent injury.
+    c. LSI is the primary metric: an LSI of 90% or higher is often considered the standard for "passing" a test, especially for return-to-sport. Asymmetries of 10–15% or more are generally considered problematic and associated with detriments to performance.
+    d. Existing research shows that maximal force is highly regarded for its reliability and strong association with athletic qualities like jump performance and sprint acceleration. 
+
+## Q3: Research Gap or Question:
+### Limited Research across all metrics?
+    Yes, even though these are common metrics, there are still significant research gaps, particularly when applying them to complex real-world athletic scenarios and combining them across data sources. For instance, limited research directly correlates subtle, daily fluctuations in metrics like Jump Height or Peak Velocity with immediate, short-term (e.g., 7-day) injury risk, especially after factoring in dynamic workload metrics like accel_load_accum.
+### Unexplored Relationships across all metrics?
+    The most significant unexplored relationships lie in the cross-platform integration of these metrics to create novel predictive models, such as investigating how specific changes in Max Force asymmetry (Vald) modulate the injury risk associated with acute spikes in Accel Load Accum (Kinexon). Another area is determining if the Force-Velocity profile derived from Jump Height and Peak Velocity (Hawkins) can predict an athlete's susceptibility to fatigue measured by changes in daily running volume (distance_total from Kinexon) in different tactical training environments.
+### Able to be compared across team/positions in novel ways?
+    Yes, these metrics enable novel comparisons across teams and positions by establishing Force-Velocity profiles (using Jump Height and Peak Velocity) that can be matched against positional requirements, rather than just raw performance scores. Furthermore, the ratio between Accel Load Accum and Total Distance can be analyzed uniquely for different positions (e.g., comparing the "neuromuscular stress per aerobic unit" for a high-volume midfielder versus a high-acceleration forward) to optimize position-specific training schedules.
