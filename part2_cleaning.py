@@ -17,6 +17,12 @@ DB_TABLE = os.getenv('DB_TABLE')
 
 DB_USER
 
+url_string = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:3306/{DB_NAME}"
+
+conn = create_engine(url_string)
+
+table = "research_experiment_refactor_test"
+
 query1_focused = """
 SELECT 
     metric,
