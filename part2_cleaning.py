@@ -37,7 +37,8 @@ WHERE metric IN (
     'Jump Height(m)',
     'Peak Propulsive Force(N)',
     'distance_total',
-    'leftMaxForce/rightMaxForce'
+    'leftMaxForce'
+    'rightMaxForce'
 )
 GROUP BY metric
 ORDER BY null_zero_percentage DESC
