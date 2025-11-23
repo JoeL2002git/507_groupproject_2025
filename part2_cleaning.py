@@ -71,7 +71,8 @@ print(f"Percentage: {worst_metric['null_zero_percentage']:.2f}%")
 3	leftMaxForce	           4275	            0.0	        9.0	        9.0	                0.21
 4	Jump Height(m)	           32123	        0.0	        0.0	        0.0	                0.00
 5	Peak Propulsive Force(N)   32123	        0.0	        0.0	        0.0	                0.00
-<ins>METRIC WITH MOST NULL/ZERO VALUES:</ins>
+
+METRIC WITH MOST NULL/ZERO VALUES:
 Metric: distance_total
 NULL Count: 0
 Zero Count: 486
