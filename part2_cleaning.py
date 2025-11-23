@@ -81,6 +81,41 @@ Zero Count: 486
 Total NULL or Zero: 486
 Percentage: 1.19%
 
+## Question 2: For each sport/team, calculate what percentage of athletes have at least 5 measurements for your selected metrics
+query2_option2 = """
+SELECT
+    team,
+    metric,
+    COUNT(DISTINCT playername) as total_athletes,
+    SUM(CASE WHEN measurement_count >= 5 THEN 1 ELSE 0 END) as athletes_with_5plus,
+    ROUND(100.0 * SUM(CASE WHEN measurement_count >= 5 THEN 1 ELSE 0 END) / COUNT(DISTINCT playername), 2) as percentage_with_5plus
+FROM (
+    SELECT
+        playername,
+        team,
+        metric,
+        COUNT(*) as measurement_count
+    FROM research_experiment_refactor_test
+    WHERE value IS NOT NULL
+      AND metric IN (
+          'accel_load_accum',
+          'Jump Height(m)',
+          'Peak Propulsive Force(N)',
+          'distance_total',
+          'leftMaxForce',
+          'rightMaxForce'
+      )
+    GROUP BY playername, team, metric
+) subquery
+GROUP BY team, metric
+ORDER BY team, metric
+"""
+
+df_coverage_option = pd.read_sql(query2_option2, conn)
+print("Option 2: Athletes with ≥5 measurements PER METRIC (by Team):")
+df_coverage_option
+
+
 2.2 Data Transformation Challenge
 
 import pandas as pd
