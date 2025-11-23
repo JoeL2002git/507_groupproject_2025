@@ -63,7 +63,8 @@ print(f"Zero Count: {worst_metric['zero_count']:.0f}")
 print(f"Total NULL or Zero: {worst_metric['null_or_zero_count']:.0f}")
 print(f"Percentage: {worst_metric['null_zero_percentage']:.2f}%")
 
-
+NULL/Zero Analysis - Sorted from HIGHEST to LOWEST percentage:
+================================================================================
     metric	                   total_records	null_count	zero_count	null_or_zero_count	null_zero_percentage
 0	distance_total	           40803	        0.0	        486.0	    486.0	            1.19
 1	rightMaxForce	           4275	            0.0	        11.0	    11.0	            0.26
@@ -73,6 +74,7 @@ print(f"Percentage: {worst_metric['null_zero_percentage']:.2f}%")
 5	Peak Propulsive Force(N)   32123	        0.0	        0.0	        0.0	                0.00
 
 METRIC WITH MOST NULL/ZERO VALUES:
+================================================================================
 Metric: distance_total
 NULL Count: 0
 Zero Count: 486
