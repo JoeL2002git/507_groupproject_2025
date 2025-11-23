@@ -23,6 +23,7 @@ conn = create_engine(url_string)
 
 table = "research_experiment_refactor_test"
 
+## Question 1: Identify which of your selected metrics have the most NULL or zero values
 query1_focused = """
 SELECT 
     metric,
