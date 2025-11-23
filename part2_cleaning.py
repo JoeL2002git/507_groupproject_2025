@@ -37,7 +37,7 @@ WHERE metric IN (
     'Jump Height(m)',
     'Peak Propulsive Force(N)',
     'distance_total',
-    'leftMaxForce'
+    'leftMaxForce',
     'rightMaxForce'
 )
 GROUP BY metric
@@ -48,12 +48,13 @@ df_null_focused = pd.read_sql(query1_focused, conn)
 print("NULL/Zero Analysis for Your 5 Metrics:")
 df_null_focused
 
-    metric	                    total_records	null_count	zero_count	null_or_zero_count	null_zero_percentage
-0	distance_total	            40803	        0.0	        486.0	    486.0	            1.19
-1	accel_load_accum	        40803	        0.0	        100.0	    100.0	            0.25
-2	Jump Height(m)	            32123	        0.0	        0.0	        0.0	                0.00
-3	Peak Propulsive Force(N)	32123	        0.0	        0.0	        0.0	                0.00
-
+    metric	                   total_records	null_count	zero_count	null_or_zero_count	null_zero_percentage
+0	distance_total	           40803	        0.0	        486.0	    486.0	            1.19
+1	rightMaxForce	           4275	            0.0	        11.0	    11.0	            0.26
+2	accel_load_accum	       40803	        0.0	        100.0	    100.0	            0.25
+3	leftMaxForce	           4275	            0.0	        9.0	        9.0	                0.21
+4	Jump Height(m)	           32123	        0.0	        0.0	        0.0	                0.00
+5	Peak Propulsive Force(N)   32123	        0.0	        0.0	        0.0	                0.00
 
 
 2.2 Data Transformation Challenge
