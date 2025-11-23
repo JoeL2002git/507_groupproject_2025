@@ -1,4 +1,21 @@
 2.1 Missing Data Analysis (Group)
+!pip install pymysql sqlalchemy pandas python-dotenv
+
+from sqlalchemy import create_engine
+import pandas as pd
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv('test.env')
+
+DB_HOST = os.getenv('DB_HOST')
+DB_USER = os.getenv('DB_USER')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
+DB_NAME = os.getenv('DB_NAME')
+DB_TABLE = os.getenv('DB_TABLE')
+
+DB_USER
 
 query1_focused = """
 SELECT 
