@@ -25,7 +25,7 @@ table = "research_experiment_refactor_test"
 
 ## Question 1: Identify which of your selected metrics have the most NULL or zero values
 query1_focused = """
-SELECT 
+SELECT
     metric,
     COUNT(*) as total_records,
     SUM(CASE WHEN value IS NULL THEN 1 ELSE 0 END) as null_count,
@@ -46,8 +46,23 @@ ORDER BY null_zero_percentage DESC
 """
 
 df_null_focused = pd.read_sql(query1_focused, conn)
-print("NULL/Zero Analysis for Your 5 Metrics:")
-df_null_focused
+
+print("="*80)
+print("NULL/Zero Analysis - Sorted from HIGHEST to LOWEST percentage:")
+print("="*80)
+print(df_null_focused.to_string(index=False))
+
+# Print the metric with the MOST NULL/zero values
+worst_metric = df_null_focused.iloc[0]
+print("\n" + "="*80)
+print("METRIC WITH MOST NULL/ZERO VALUES:")
+print("="*80)
+print(f"Metric: {worst_metric['metric']}")
+print(f"NULL Count: {worst_metric['null_count']:.0f}")
+print(f"Zero Count: {worst_metric['zero_count']:.0f}")
+print(f"Total NULL or Zero: {worst_metric['null_or_zero_count']:.0f}")
+print(f"Percentage: {worst_metric['null_zero_percentage']:.2f}%")
+
 
     metric	                   total_records	null_count	zero_count	null_or_zero_count	null_zero_percentage
 0	distance_total	           40803	        0.0	        486.0	    486.0	            1.19
@@ -56,7 +71,12 @@ df_null_focused
 3	leftMaxForce	           4275	            0.0	        9.0	        9.0	                0.21
 4	Jump Height(m)	           32123	        0.0	        0.0	        0.0	                0.00
 5	Peak Propulsive Force(N)   32123	        0.0	        0.0	        0.0	                0.00
-
+<ins>METRIC WITH MOST NULL/ZERO VALUES:</ins>
+Metric: distance_total
+NULL Count: 0
+Zero Count: 486
+Total NULL or Zero: 486
+Percentage: 1.19%
 
 2.2 Data Transformation Challenge
 
