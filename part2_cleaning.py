@@ -1,5 +1,34 @@
 2.1 Missing Data Analysis (Group)
 
+query1_focused = """
+SELECT 
+    metric,
+    COUNT(*) as total_records,
+    SUM(CASE WHEN value IS NULL THEN 1 ELSE 0 END) as null_count,
+    SUM(CASE WHEN value = 0 THEN 1 ELSE 0 END) as zero_count,
+    SUM(CASE WHEN value IS NULL OR value = 0 THEN 1 ELSE 0 END) as null_or_zero_count,
+    ROUND(100.0 * SUM(CASE WHEN value IS NULL OR value = 0 THEN 1 ELSE 0 END) / COUNT(*), 2) as null_zero_percentage
+FROM research_experiment_refactor_test
+WHERE metric IN (
+    'accel_load_accum',
+    'Jump Height(m)',
+    'Peak Propulsive Force(N)',
+    'distance_total',
+    'leftMaxForce/rightMaxForce'
+)
+GROUP BY metric
+ORDER BY null_zero_percentage DESC
+"""
+
+df_null_focused = pd.read_sql(query1_focused, conn)
+print("NULL/Zero Analysis for Your 5 Metrics:")
+df_null_focused
+
+    metric	                    total_records	null_count	zero_count	null_or_zero_count	null_zero_percentage
+0	distance_total	            40803	        0.0	        486.0	    486.0	            1.19
+1	accel_load_accum	        40803	        0.0	        100.0	    100.0	            0.25
+2	Jump Height(m)	            32123	        0.0	        0.0	        0.0	                0.00
+3	Peak Propulsive Force(N)	32123	        0.0	        0.0	        0.0	                0.00
 
 
 
