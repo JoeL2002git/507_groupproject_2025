@@ -66,12 +66,13 @@ print(f"Percentage: {worst_metric['null_zero_percentage']:.2f}%")
 NULL/Zero Analysis - Sorted from HIGHEST to LOWEST percentage:
 ================================================================================
     metric	                   total_records	null_count	zero_count	null_or_zero_count	null_zero_percentage
-0	distance_total	           40803	        0.0	        486.0	    486.0	            1.19
-1	rightMaxForce	           4275	            0.0	        11.0	    11.0	            0.26
-2	accel_load_accum	       40803	        0.0	        100.0	    100.0	            0.25
-3	leftMaxForce	           4275	            0.0	        9.0	        9.0	                0.21
-4	Jump Height(m)	           32123	        0.0	        0.0	        0.0	                0.00
-5	Peak Propulsive Force(N)   32123	        0.0	        0.0	        0.0	                0.00
+------------------------------|---------------|------------|-----------|-------------------|---------------------
+0	distance_total	          | 40803	      |  0.0	   |  486.0	   | 486.0	           | 1.19
+1	rightMaxForce	          | 4275	      |  0.0	   |  11.0	   | 11.0	           | 0.26
+2	accel_load_accum	      | 40803	      |  0.0	   |  100.0	   | 100.0	           | 0.25
+3	leftMaxForce	          | 4275	      |  0.0	   |  9.0	   | 9.0	           | 0.21
+4	Jump Height(m)	          | 32123	      |  0.0	   |  0.0	   | 0.0	           | 0.00
+5	Peak Propulsive Force(N)  | 32123	      |  0.0	   |  0.0	   | 0.0	           | 0.00
 
 METRIC WITH MOST NULL/ZERO VALUES:
 ================================================================================
@@ -117,17 +118,18 @@ df_coverage_option
 
 Athletes with ≥5 measurements PER METRIC (by Team):
     team	            metric	           total_athletes	athletes_with_5plus  percentage_with_5plus
-0	Baseball	        leftMaxForce	   63	            14.0	             22.22
-1	Baseball	        rightMaxForce	   63	            14.0	             22.22
-2	Football	        accel_load_accum   44	            43.0	             97.73
-3	Football	        distance_total	   44	            43.0	             97.73
-4	Football	        leftMaxForce	   115	            63.0	             54.78
+-----------------------|-------------------|----------------|--------------------|----------------------
+0	Baseball	       | leftMaxForce	   | 63	            | 14.0	             | 22.22
+1	Baseball	       | rightMaxForce	   | 63	            | 14.0	             | 22.22
+2	Football	       | accel_load_accum  | 44	            | 43.0	             | 97.73
+3	Football	       | distance_total	   | 44	            | 43.0	             | 97.73
+4	Football	       | leftMaxForce	   | 115	        | 63.0	             | 54.78
 ...	...	...	...	...	...
-183	Women's Soccer	    rightMaxForce	    41	            28.0	             68.29
-184	Womens Basketball	accel_load_accum	76	            63.0	             82.89
-185	Womens Basketball	distance_total	    76	            63.0	             82.89
-186	Womens Soccer	    accel_load_accum	52	            51.0	             98.08
-187	Womens Soccer	    distance_total	    52	            51.0	             98.08
+183	Women's Soccer	   | rightMaxForce	   | 41	            | 28.0	             | 68.29
+184	Womens Basketball  | accel_load_accum  | 76	            | 63.0	             | 82.89
+185	Womens Basketball  | distance_total	   | 76	            | 63.0	             | 82.89
+186	Womens Soccer	   | accel_load_accum  | 52	            | 51.0	             | 98.08
+187	Womens Soccer	   | distance_total	   | 52	            | 51.0	             | 98.08
 
 2.2 Data Transformation Challenge
 
