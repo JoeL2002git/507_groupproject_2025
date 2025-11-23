@@ -115,6 +115,19 @@ df_coverage_option = pd.read_sql(query2_option2, conn)
 print("Option 2: Athletes with ≥5 measurements PER METRIC (by Team):")
 df_coverage_option
 
+Athletes with ≥5 measurements PER METRIC (by Team):
+    team	            metric	           total_athletes	athletes_with_5plus  percentage_with_5plus
+0	Baseball	        leftMaxForce	   63	            14.0	             22.22
+1	Baseball	        rightMaxForce	   63	            14.0	             22.22
+2	Football	        accel_load_accum   44	            43.0	             97.73
+3	Football	        distance_total	   44	            43.0	             97.73
+4	Football	        leftMaxForce	   115	            63.0	             54.78
+...	...	...	...	...	...
+183	Women's Soccer	    rightMaxForce	    41	            28.0	             68.29
+184	Womens Basketball	accel_load_accum	76	            63.0	             82.89
+185	Womens Basketball	distance_total	    76	            63.0	             82.89
+186	Womens Soccer	    accel_load_accum	52	            51.0	             98.08
+187	Womens Soccer	    distance_total	    52	            51.0	             98.08
 
 2.2 Data Transformation Challenge
 
