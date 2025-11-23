@@ -1,6 +1,6 @@
 # 1.4. Metric Selection
 
-## Q1. 5 Metrics: Jump Height (m) and Peak Velocity (m/s) from Hawkins dataset, distance_total and accel_load_accum from Kinexon dataset, leftAvgForce/rightAverageForce from Vald dataset
+## Q1. 5 Metrics: Jump Height (m) and Peak Velocity (m/s) from Hawkins dataset, distance_total and accel_load_accum from Kinexon dataset, leftMaxForce/rightMaxForce from Vald dataset
 
 ## Q2. Research on 5 Metrics:
 ### Jump Height
