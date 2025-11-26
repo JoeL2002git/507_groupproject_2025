@@ -25,7 +25,7 @@
     d. Existing research found that accelerometer-based load metrics are a useful approach for monitoring the multifaceted external load in sports like basketball and handball. It is often used in combination with subjective internal load measures (like RPE) for a holistic view of training stress.
 ### Left/Right Max Force
     a. Maximum force, which is the highest force an athlete can generate in a single limb during a static (isometric) strength test, such as a leg extension/curl. Limb Symmetry Index (LSI) is derived by comparing left vs. right.
-    b. It's importanta as maximal force underpins speed, power, and injury resistance. The LSI is crucial for injury screening and rehabilitation monitoring, as significant asymmetries can be a risk factor for subsequent injury.
+    b. It's important as maximal force underpins speed, power, and injury resistance. The LSI is crucial for injury screening and rehabilitation monitoring, as significant asymmetries can be a risk factor for subsequent injury.
     c. LSI is the primary metric: an LSI of 90% or higher is often considered the standard for "passing" a test, especially for return-to-sport. Asymmetries of 10–15% or more are generally considered problematic and associated with detriments to performance.
     d. Existing research shows that maximal force is highly regarded for its reliability and strong association with athletic qualities like jump performance and sprint acceleration. 
 
