@@ -1,13 +1,13 @@
-2.1 Missing Data Analysis (Group)
-!pip install pymysql sqlalchemy pandas python-dotenv
+# 2.1 Missing Data Analysis (Group)
 
 from sqlalchemy import create_engine
 import pandas as pd
-
+from pathlib import Path
 import os
 from dotenv import load_dotenv
 
-load_dotenv('test.env')
+env_path = Path(__file__).resolve().parent / ".env"
+load_dotenv(env_path)
 
 DB_HOST = os.getenv('DB_HOST')
 DB_USER = os.getenv('DB_USER')
@@ -63,7 +63,7 @@ print(f"Zero Count: {worst_metric['zero_count']:.0f}")
 print(f"Total NULL or Zero: {worst_metric['null_or_zero_count']:.0f}")
 print(f"Percentage: {worst_metric['null_zero_percentage']:.2f}%")
 
-NULL/Zero Analysis - Sorted from HIGHEST to LOWEST percentage:
+""" NULL/Zero Analysis - Sorted from HIGHEST to LOWEST percentage:
 ================================================================================
     metric	                   total_records	null_count	zero_count	null_or_zero_count	null_zero_percentage
 ------------------------------|---------------|------------|-----------|-------------------|---------------------
@@ -81,6 +81,7 @@ NULL Count: 0
 Zero Count: 486
 Total NULL or Zero: 486
 Percentage: 1.19%
+"""
 
 ## Question 2: For each sport/team, calculate what percentage of athletes have at least 5 measurements for your selected metrics
 query2_option2 = """
@@ -116,7 +117,7 @@ df_coverage_option = pd.read_sql(query2_option2, conn)
 print("Option 2: Athletes with ≥5 measurements PER METRIC (by Team):")
 df_coverage_option
 
-Athletes with ≥5 measurements PER METRIC (by Team):
+""" Athletes with ≥5 measurements PER METRIC (by Team):
     team	            metric	           total_athletes	athletes_with_5plus  percentage_with_5plus
 -----------------------|-------------------|----------------|--------------------|----------------------
 0	Baseball	       | leftMaxForce	   | 63	            | 14.0	             | 22.22
@@ -130,8 +131,9 @@ Athletes with ≥5 measurements PER METRIC (by Team):
 185	Womens Basketball  | distance_total	   | 76	            | 63.0	             | 82.89
 186	Womens Soccer	   | accel_load_accum  | 52	            | 51.0	             | 98.08
 187	Womens Soccer	   | distance_total	   | 52	            | 51.0	             | 98.08
+"""
 
-2.2 Data Transformation Challenge
+# 2.2 Data Transformation Challenge
 
 import pandas as pd
 def transform_player_metrics(df, player_name, metrics):
@@ -182,7 +184,8 @@ def print_example_transforms(df):
         print(transformed.head())  
 
 # Use the 'response' DataFrame, which contains the data from the database
-print_example_transforms(response) 
+# print_example_transforms(response)  # response dataframe was never created
+
 """
 =====================================
 WIDE FORMAT OUTPUT FOR PLAYER_005
@@ -213,7 +216,7 @@ timestamp
 2025-09-08 12:25:41        506.25         473.50
 """
 
-2.3 Create a Derived Metric
+# 2.3 Create a Derived Metric
 
 """
 Calculates team means for 6 key metrics and adds percent-difference columns
@@ -328,3 +331,57 @@ summary = df_with_means.groupby('metric').agg({
 }).round(2)
 summary.columns = ['Min %', 'Max %', 'Mean %', 'Std Dev %']
 print(summary.to_string())
+
+
+# Identify the top 5 and bottom 5 performers relative to their team mean
+
+print("\n" + "="*80)
+print("Top 5 and bottom 5 performers per metric")
+print("="*80)
+
+# Dictionary to store results for each metric
+top_bottom_results = {}
+
+# Create a loop to pull metrics for each athlete 
+for m in METRICS:
+    df_metric = df_with_means[df_with_means['metric'] == m].copy()
+
+    # Sort highest to lowest percent difference
+    df_sorted = df_metric.sort_values('pct_diff_from_team', ascending=False)
+
+# Sorts out the top 5 and bottom 5 players by pulling the following columns
+    top5 = df_sorted.head(5)[['playername', 'team', 'value', 'team_mean', 'pct_diff_from_team']]
+    bottom5 = df_sorted.tail(5)[['playername', 'team', 'value', 'team_mean', 'pct_diff_from_team']]
+
+# Stored the results in the dictionary
+    top_bottom_results[m] = {
+        'top5': top5,
+        'bottom5': bottom5
+    }
+
+# Print the results 
+    print(f"\n--- Metric: {m} ---")
+    print("\nTop 5 performers:")
+    print(top5.to_string(index=False))
+
+    print("\nBottom 5 performers:")
+    print(bottom5.to_string(index=False))
+
+# Z-score
+from scipy.stats import zscore
+
+print("\n" + "="*80)
+print("Z-scores per team per metric (scipy version)")
+print("="*80)
+
+# Make a copy of the dataframe
+df_z = df_with_means.copy()
+
+# Compute z-scores separately for each team and metric group
+df_z['z_score'] = df_z.groupby(['team', 'metric'])['value'].transform(
+    lambda x: zscore(x, nan_policy='omit')
+)
+
+# Print results
+print("\nSample Z-scores (first 20 rows):")
+print(df_z[['playername', 'team', 'metric', 'value', 'z_score']].head(20).to_string(index=False))
