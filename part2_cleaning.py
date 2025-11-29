@@ -184,7 +184,8 @@ def print_example_transforms(df):
         print(transformed.head())  
 
 # Use the 'response' DataFrame, which contains the data from the database
-# print_example_transforms(response)  # response dataframe was never created
+response = pd.read_sql(sql_toexecute, conn)
+print_example_transforms(response)      
 
 """
 =====================================
