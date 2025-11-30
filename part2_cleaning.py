@@ -178,7 +178,7 @@ print("\nSample of Player-Metric Combinations with STALE Data -Newest Date shown
 # Display a sample of the oldest stale data points
 print(stale_data_df.tail(5).to_string(index=False))
 
-# Calculate unique players with *any* stale metric
+# Calculate unique players with any stale metric
 stale_players = stale_data_df['playername'].unique()
 print(f"\nTotal unique athletes with at least one metric older than 6 months: {len(stale_players)}")
 
