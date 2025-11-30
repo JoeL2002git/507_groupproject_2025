@@ -133,6 +133,58 @@ df_coverage_option
 187	Womens Soccer	   | distance_total	   | 52	            | 51.0	             | 98.08
 """
 
+# Question 3 (Part 2.1): Identify athletes who haven't been tested in the last 6 months (for your selected metrics)
+import datetime as dt
+REFERENCE_DATE = '2025-10-21' #Last Date from dataset
+STALE_DAYS_THRESHOLD = 182 # Threshold for stale data (6 months ~ 182 days)
+METRICS = [
+    'accel_load_accum',
+    'Jump Height(m)',
+    'Peak Propulsive Force(N)',
+    'distance_total',
+    'leftMaxForce',
+    'rightMaxForce'
+]
+metrics_str = "','".join(METRICS)
+
+query_tested = f"""
+SELECT
+    playername,
+    team,
+    metric,
+    MAX(timestamp) AS last_measurement_date,
+    DATEDIFF('{REFERENCE_DATE}', MAX(timestamp)) AS days_since_last_measurement,
+    CASE
+        -- Identify data older than 182 days (6 months)
+        WHEN DATEDIFF('{REFERENCE_DATE}', MAX(timestamp)) > {STALE_DAYS_THRESHOLD} THEN 'STALE (> 6 Months)'
+        ELSE 'RECENT (<= 6 Months)'
+    END AS time_status
+FROM {table}
+WHERE metric IN ('{metrics_str}')
+  AND value IS NOT NULL
+GROUP BY playername, team, metric
+ORDER BY days_since_last_measurement DESC
+"""
+
+df_tested_time = pd.read_sql(query_tested, conn)
+
+# Filter for athletes who have NOT been tested in the last 6 months
+stale_data_df = df_tested_time[df_tested_time['time_status'] == 'STALE (> 6 Months)']
+
+print(f"\nTotal Unique Player-Metric Records: {len(df_tested_time)}")
+print(f"\nNumber of Player-Metric combinations with data older than 6 months: {len(stale_data_df)}")
+
+print("\nSample of Player-Metric Combinations with STALE Data -Newest Date shown:")
+# Display a sample of the oldest stale data points
+print(stale_data_df.tail(5).to_string(index=False))
+
+# Calculate unique players with *any* stale metric
+stale_players = stale_data_df['playername'].unique()
+print(f"\nTotal unique athletes with at least one metric older than 6 months: {len(stale_players)}")
+
+# Question 4 (Part 2.1): Determine if you have sufficient data to answer your research question
+# Yes, we have sufficient data to answer our 5 research questions, since we have thousands of rows of relevant data that are new and fill the critera for having been tested with atleast one of the metrics.
+
 # 2.2 Data Transformation Challenge
 
 import pandas as pd
@@ -184,8 +236,8 @@ def print_example_transforms(df):
         print(transformed.head())  
 
 # Use the 'response' DataFrame, which contains the data from the database
-response = pd.read_sql(sql_toexecute, conn)
-print_example_transforms(response)      
+#response = pd.read_sql(sql_toexecute, conn)
+#print_example_transforms(response)      
 
 """
 =====================================
