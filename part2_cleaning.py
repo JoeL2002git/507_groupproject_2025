@@ -235,9 +235,14 @@ def print_example_transforms(df):
         transformed = transform_player_metrics(df, p, selected_metrics)
         print(transformed.head())  
 
+sql_toexecute = """
+SELECT playername, metric, timestamp, value
+FROM research_experiment_refactor_test
+"""
+
 # Use the 'response' DataFrame, which contains the data from the database
-#response = pd.read_sql(sql_toexecute, conn)
-#print_example_transforms(response)      
+response = pd.read_sql(sql_toexecute, conn)
+print_example_transforms(response)      
 
 """
 =====================================
