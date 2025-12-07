@@ -201,3 +201,40 @@ flagged_accel['flag_reason'] = 'Accel load >90th percentile (gender)'
 flagged_accel['metric_name'] = 'accel_load_accum'
 flagged_accel['flag_value'] = flagged_accel['value'].round(2)
 flagged_accel['last_test'] = flagged_accel['timestamp']
+
+# Exporting to CSV
+from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+# Determining the script's directory, making sure it works for everyone regardless of user's current directory or username
+try:
+    # Directory of the currently executing file
+    script_dir = Path(__file__).resolve().parent
+except NameError:
+    print("File not defined.")
+    script_dir = Path(os.getcwd())
+
+# Loading environment variables from .env
+env_path = script_dir / ".env"
+load_dotenv(env_path)
+
+# Selecting required columns from both flagged dataframes
+columns_to_keep = ['playername', 'team', 'flag_reason', 'flag_value', 'last_test']
+
+df_accel_output = flagged_accel.reindex(columns=columns_to_keep)
+df_asymmetry_output = flagged_asymmetry.reindex(columns=columns_to_keep)
+
+# Combining the two dataframes
+final_report_df = pd.concat([df_accel_output, df_asymmetry_output], ignore_index=True)
+
+# Renaming columns
+final_report_df.columns = ['Player Name', 'Team', 'Flag Reason', 'Metric Value', 'Last Test Date']
+
+# Output path
+final_output_filename = 'part4_flagged_athletes.csv'
+final_output_path = script_dir / final_output_filename
+
+final_report_df.to_csv(final_output_path, index=False)
+
+print("\nSuccessfully exported to part4_flagged_athletes.csv")

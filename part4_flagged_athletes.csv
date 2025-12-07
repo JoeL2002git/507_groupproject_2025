@@ -1,0 +1,34 @@
+Player Name,Team,Flag Reason,Metric Value,Last Test Date
+PLAYER_1114,Mens Basketball,Accel load >90th percentile (gender),895.01,2022-03-21 15:00:00
+PLAYER_430,Mens Basketball,Accel load >90th percentile (gender),1194.94,2023-03-05 22:00:00
+PLAYER_1162,Mens Basketball,Accel load >90th percentile (gender),881.67,2023-03-05 22:00:00
+PLAYER_088,Womens Basketball,Accel load >90th percentile (gender),938.44,2023-03-10 23:30:00
+PLAYER_066,Mens Basketball,Accel load >90th percentile (gender),930.72,2025-03-07 18:10:26
+PLAYER_252,Mens Basketball,Accel load >90th percentile (gender),1149.68,2025-03-07 18:10:26
+PLAYER_1079,Mens Basketball,Accel load >90th percentile (gender),876.41,2025-03-07 18:10:26
+PLAYER_1239,Womens Basketball,Accel load >90th percentile (gender),973.86,2025-03-12 16:52:38
+PLAYER_159,Womens Basketball,Accel load >90th percentile (gender),960.22,2025-03-12 16:52:38
+PLAYER_958,Mens Basketball,Accel load >90th percentile (gender),884.55,2025-10-20 18:31:00
+PLAYER_755,Mens Basketball,Accel load >90th percentile (gender),880.72,2025-10-20 18:31:00
+PLAYER_1036,Mens Basketball,Accel load >90th percentile (gender),865.6,2025-10-20 18:31:00
+PLAYER_1050,Mens Basketball,Accel load >90th percentile (gender),892.65,2025-10-20 18:31:00
+PLAYER_1186,Mens Basketball,Accel load >90th percentile (gender),888.53,2025-10-20 18:31:00
+PLAYER_593,Men's Basketball,Bilateral asymmetry >10%,14.89,2024-08-13 11:37:10
+PLAYER_252,Men's Basketball,Bilateral asymmetry >10%,15.59,2024-08-13 11:40:39
+PLAYER_1128,Women's Basketball,Bilateral asymmetry >10%,16.83,2024-10-21 16:08:47
+PLAYER_343,Women's Basketball,Bilateral asymmetry >10%,13.6,2025-08-25 13:41:46
+PLAYER_190,Women's Basketball,Bilateral asymmetry >10%,20.76,2025-09-02 14:59:51
+PLAYER_332,Women's Basketball,Bilateral asymmetry >10%,22.2,2025-09-02 15:03:40
+PLAYER_042,Women's Basketball,Bilateral asymmetry >10%,25.56,2025-09-02 15:04:20
+PLAYER_1096,Women's Basketball,Bilateral asymmetry >10%,24.56,2025-09-02 15:05:48
+PLAYER_363,Women's Basketball,Bilateral asymmetry >10%,32.52,2025-09-02 15:07:15
+PLAYER_851,Women's Basketball,Bilateral asymmetry >10%,16.27,2025-09-02 15:07:59
+PLAYER_555,Women's Basketball,Bilateral asymmetry >10%,15.07,2025-09-02 15:56:29
+PLAYER_056,Women's Basketball,Bilateral asymmetry >10%,15.18,2025-09-02 15:58:57
+PLAYER_601,Women's Basketball,Bilateral asymmetry >10%,25.02,2025-09-02 15:59:48
+PLAYER_755,Men's Basketball,Bilateral asymmetry >10%,22.22,2025-09-05 19:00:59
+PLAYER_1188,Men's Basketball,Bilateral asymmetry >10%,15.72,2025-09-05 19:03:44
+PLAYER_995,Men's Basketball,Bilateral asymmetry >10%,18.35,2025-09-05 19:05:37
+PLAYER_616,Men's Basketball,Bilateral asymmetry >10%,13.9,2025-09-05 19:06:41
+PLAYER_412,Men's Basketball,Bilateral asymmetry >10%,10.59,2025-09-05 19:07:33
+PLAYER_540,Men's Basketball,Bilateral asymmetry >10%,10.44,2025-09-05 19:16:38

@@ -13,9 +13,7 @@ __pycache__/
 *.ipynb_checkpoints/
 
 # Data files (if you download data locally)
-*.csv
 *.pkl
-*.xlsx
 !*_example.csv  # Allow example files
 
 # IDEs
