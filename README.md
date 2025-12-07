@@ -1,6 +1,17 @@
 # 507_groupproject_2025
 group project
 
+## Group members
+1. Joe Li
+2. Wan Yong Lin Huang
+    - Part 1.2 Exploration
+    - Part 2.3 Derived metric
+    - Part 3.1 Individual analysis
+    - Part 4.1 Flagging system
+3. Yu Lin
+4. Wei Wei Jiang
+5. Chinyere Nwosu
+
 ## Part 1.2 Data Quality Assessment
 ### Methods
 The MySQL database for the athlete sport information was accessed with sqlalchemy in python and using database credebtials that were securely stored. Then analyses was performed in python to answer specific questions regarding the database.
