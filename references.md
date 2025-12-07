@@ -23,3 +23,8 @@
 22. Svilar, L., & Jukić, I. (2018). Load monitoring system in a top-level basketball team: Relationship between external and internal training load. Kinesiology, 50(1), 25–33. https://doi.org/10.26582/k.50.1.4
 23. Tomaz, G. G., Souza, M. V. C., Carneiro, M. A. D. S., Lima, M. L., Assumpção, C. O., & Orsatti, F. L. (2024). Propulsive forces and muscle activation during gait in premenopausal vs. postmenopausal midlife women. Menopause, 31(3), 194–201. https://doi.org/10.1097/GME.0000000000002318
 24. Wellsandt, E., Failla, M. J., & Snyder-Mackler, L. (2017). Limb Symmetry Indexes Can Overestimate Knee Function After Anterior Cruciate Ligament Injury. The Journal of orthopaedic and sports physical therapy, 47(5), 334–338. https://doi.org/10.2519/jospt.2017.7285
+
+
+# References for Part 4.1
+1. Carey, D. L., Ong, K. L., Whiteley, R., Crossley, K. M., Crow, J., & Morris, M. E. (2022). Predicting injury risk in Australian Football using machine learning: The role of high-load efforts exceeding the 95th percentile. Journal of Science and Medicine in Sport, 25(7), 567-572.
+2. Parkinson, A. O., Apps, C. L., Morris, J. G., Barnett, C. T., & Lewis, M. G. C. (2021). The calculation, thresholds and reporting of inter-limb strength asymmetry: A systematic review. Journal of Sports Science & Medicine, 20(4), 594-617.
