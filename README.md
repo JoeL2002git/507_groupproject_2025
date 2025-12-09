@@ -3,11 +3,16 @@ group project
 
 ## Group members
 1. Joe Li
+    - Part 1.4 Literature Review & Metric Selection
+    - Part 2.3 Derived Metric
+    - Part 3.3 Dashboard Metric
+    - Part 4.2 Research Synthesis
+    - Part 4.3 Final Presentation: Key Findings
 2. Wan Yong Lin Huang
     - Part 1.2 Exploration
-    - Part 2.3 Derived metric
-    - Part 3.1 Individual analysis
-    - Part 4.1 Flagging system
+    - Part 2.3 Derived Metric
+    - Part 3.1 Individual Analysis
+    - Part 4.1 Flagging System
 3. Yu Lin
 4. Wei Wei Jiang
 5. Chinyere Nwosu
