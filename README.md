@@ -9,6 +9,10 @@ group project
     - Part 3.1 Individual analysis
     - Part 4.1 Flagging system
 3. Yu Lin
+   - Part 1.4 Brief Review Of Literature & Metric Selection
+   - Part 2.1 Missing Data Analysis
+   - Part 3.1 Individual Athlete Timeline
+   - Part 4.1 Performance Monitoring Flag System
 4. Wei Wei Jiang
 5. Chinyere Nwosu
    - Part 1.3 Metric discovery and selection
