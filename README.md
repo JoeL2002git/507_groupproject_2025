@@ -11,6 +11,11 @@ group project
 3. Yu Lin
 4. Wei Wei Jiang
 5. Chinyere Nwosu
+   - Part 1.3 Metric discovery and selection
+   - Part 2.2 Data transformation challenge
+   - Part 3.3 Dashboard metric
+   - Part 4.2 Discussion, limitations, and future directions
+
 
 ## Part 1.2 Data Quality Assessment
 ### Methods
