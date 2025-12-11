@@ -14,11 +14,11 @@ group project
    - Part 3.1 Individual Athlete Timeline
    - Part 4.1 Performance Monitoring Flag System
 4. Wei Wei Jiang
-   - Part 1.4 Literature Review Report 
+   - Part 1.4 Literature Review Report
+   - Part 2.1 Missing Data Analysis
    - Part 3.2 Team Comparison Analysis (Pair Work)
    - Part 4.2 Introduction and Methods
-
-6. Chinyere Nwosu
+5. Chinyere Nwosu
    - Part 1.3 Metric discovery and selection
    - Part 2.2 Data transformation challenge
    - Part 3.3 Dashboard metric
