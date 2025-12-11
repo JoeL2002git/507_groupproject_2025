@@ -18,7 +18,7 @@
 17. McKay, B., Mandorino, M., Lacome, M., Beanland, E., McLaren, S., & Green, J. (2025, October 22). Overrated and underrated GPS metrics: The view of 6 experts - Sportsmith. Sportsmith. https://www.sportsmith.co/articles/overrated-and-underrated-gps-metrics-the-view-of-6-experts/
 18. Mujika, I. (2017). Quantification of Training and Competition Loads in Endurance Sports: Methods and Applications. International Journal of Sports Physiology and Performance, 12(s2), S2-9S2-17. https://doi.org/10.1123/ijspp.2016-0403
 19. Nuzzo, James L; Anning, Jonathan H; Scharfenberg, Jessica M. The Reliability of Three Devices Used for Measuring Vertical Jump Height. Journal of Strength and Conditioning Research 25(9):p 2580-2590, September 2011. | DOI: 10.1519/JSC.0b013e3181fee650
-20. Parkinson, A. O., Apps, C. L., Morris, J. G., Barnett, C. T., & Lewis, M. G. C. (2021). The Calculation, Thresholds and Reporting of Inter-Limb Strength Asymmetry: A Systematic Review. Journal of sports science & medicine, 20(4), 594–617. https://doi.org/10.52082/jssm.2021.594
+20. Parkinson, A. O., Apps, C. L., Morris, J. G., Barnett, C. T., & Lewis, M. G. C. (2021). The Calculation, Thresholds, and Reporting of Inter-Limb Strength Asymmetry: A Systematic Review. Journal of sports science & medicine, 20(4), 594–617. https://doi.org/10.52082/jssm.2021.594
 21. Sanders, G. J., Skodinski, S., Cabarkapa, D. V., Howard, M., Dimitrije Cabarkapa, & Peacock, C. A. (2024). Positional Differences in Jump Loads and Force and Velocity Metrics Throughout a 16‐Week Division I Volleyball Season. Translational Sports Medicine, 2024(1). https://doi.org/10.1155/tsm2/5933923
 22. Svilar, L., & Jukić, I. (2018). Load monitoring system in a top-level basketball team: Relationship between external and internal training load. Kinesiology, 50(1), 25–33. https://doi.org/10.26582/k.50.1.4
 23. Tomaz, G. G., Souza, M. V. C., Carneiro, M. A. D. S., Lima, M. L., Assumpção, C. O., & Orsatti, F. L. (2024). Propulsive forces and muscle activation during gait in premenopausal vs. postmenopausal midlife women. Menopause, 31(3), 194–201. https://doi.org/10.1097/GME.0000000000002318
@@ -28,3 +28,28 @@
 # References for Part 4.1
 1. Carey, D. L., Ong, K. L., Whiteley, R., Crossley, K. M., Crow, J., & Morris, M. E. (2022). Predicting injury risk in Australian Football using machine learning: The role of high-load efforts exceeding the 95th percentile. Journal of Science and Medicine in Sport, 25(7), 567-572.
 2. Parkinson, A. O., Apps, C. L., Morris, J. G., Barnett, C. T., & Lewis, M. G. C. (2021). The calculation, thresholds and reporting of inter-limb strength asymmetry: A systematic review. Journal of Sports Science & Medicine, 20(4), 594-617.
+
+# References for Part 4.2 
+1. Bache-Mathiesen, L. K., Andersen, T. E., Dalen-Lorentsen, T., Tabben, M., Chamari, K., Clarsen, B., & Fagerland, M. W. (2023). A new statistical approach to training load and injury risk: Separating the acute from the chronic load. Biology of Sport, 41(1), 119. https://doi.org/10.5114/biolsport.2024.127388
+2. Baugh, C. M., Weintraub, G. S., Gregory, A. J., Djoko, A., Dompier, T. P., & Kerr, Z. Y. (2018). Descriptive epidemiology of injuries sustained in National Collegiate Athletic Association men's and women's volleyball, 2013-2014 to 2014-2015. Sports Health, 10(1), 60–69. https://doi.org/10.1177/1941738117733685
+3. Bittencourt, N. F. N., Meeuwisse, W. H., Mendonça, L. D., Nettel-Aguirre, A., Ocarino, J. M., & Fonseca, S. T. (2016). Complex systems approach for sports injuries: moving from risk factor identification to injury pattern recognition-narrative review and new concept. British Journal of Sports Medicine, 50(21), 1309–1314. https://doi.org/10.1136/bjsports-2015-095850
+4. Djaoui, L., Haddad, M., Chamari, K., & Dellal, A. (2017). Monitoring training load and fatigue in soccer players with physiological markers. Physiology & behavior, 181, 86–94. https://doi.org/10.1016/j.physbeh.2017.09.004
+5. Fulton, J., Wright, K., Kelly, M., Zebrosky, B., Zanis, M., Drvol, C., & Butler, R. (2014). Injury risk is altered by previous injury: a systematic review of the literature and presentation of causative neuromuscular factors. International journal of sports physical therapy, 9(5), 583–595. https://pubmed.ncbi.nlm.nih.gov/25328821/
+6. Fort-Vanmeerhaeghe, A., Milà-Villarroel, R., Pujol-Marzo, M., Arboix-Alió, J., & Bishop, C. (2022). Higher vertical-jumping asymmetries and lower physical performance are indicators of increased injury incidence among youth team-sport athletes. Journal of strength and conditioning research, 36(8), 2204–2211. https://doi.org/10.1519/JSC.0000000000003828
+7. Fort-Vanmeerhaeghe, A., Pujol-Marzo, M., Milà, R., Campos, B., Nevot-Casas, O., Casadevall-Sayeras, P., & Peña, J. (2025). Injury risk and overall well-being during the menstrual cycle in elite adolescent team sports athletes. Healthcare (Basel, Switzerland), 13(10), 1154. https://doi.org/10.3390/healthcare13101154
+8. Gao, B., Dwivedi, S., Milewski, M. D., & Cruz, A. I., Jr (2019). Lack of sleep and sports injuries in adolescents: A Systematic Review and Meta-analysis. Journal of Pediatric Orthopedics, 39(5), e324–e333. https://doi.org/10.1097/BPO.0000000000001306
+9. Ibáñez, S. J., & D., C. (2022). Individualization of intensity thresholds on external workload demands in women’s basketball by K-Means clustering: Differences based on the competitive level. Sensors, 22(1), 324. https://doi.org/10.3390/s22010324
+10. Malone, S., Hughes, B., Collins, K., & Akubat, I. (2020). Methods of monitoring training load and their association with changes across fitness measures in hurling players. Journal of strength and conditioning research, 34(1), 225–234. https://doi.org/10.1519/JSC.0000000000002655
+11. Parkinson, A. O., Apps, C. L., Morris, J. G., Barnett, C. T., & Lewis, M. G. C. (2021). The calculation, thresholds, and reporting of inter-limb strength asymmetry: A systematic review. Journal of sports science & medicine, 20(4), 594–617. https://doi.org/10.52082/jssm.2021.594
+12. Wang, C., Stovitz, S.D., Kaufman, J.S. et al. (2024). Principles of musculoskeletal sport injuries for epidemiologists: A review. Inj. Epidemiol. 11, 21 https://doi.org/10.1186/s40621-024-00507-3 
+
+
+
+
+
+
+
+
+
+
+  
