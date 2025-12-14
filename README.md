@@ -28,3 +28,9 @@ group project
    - Part 2.2 Data transformation challenge
    - Part 3.3 Dashboard metric
    - Part 4.2 Discussion, limitations, and future directions
+
+
+## 1.1 Database Setup
+
+### Joe's
+![Joe setup](Screenshot/JoeSetup.png)
