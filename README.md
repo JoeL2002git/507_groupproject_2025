@@ -34,3 +34,11 @@ group project
 
 ### Joe's
 ![Joe setup](Screenshot/JoeSetup.png)
+
+### Wan Yong Lin Huang
+
+### Yu Lin
+
+### Wei Wei Jiang
+
+### Chinyere Nwosu
