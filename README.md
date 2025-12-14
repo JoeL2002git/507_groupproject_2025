@@ -47,3 +47,5 @@ group project
 ### Wei Wei Jiang
 
 ### Chinyere Nwosu
+![Chinyere Setup 1](Screenshot/chinyereloadingdata.png)
+![Chinyere Setup 2](Screenshot/chinyereloadingdata.png2.png)
