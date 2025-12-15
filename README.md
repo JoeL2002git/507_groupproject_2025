@@ -45,6 +45,7 @@ group project
 ### Yu Lin
 
 ### Wei Wei Jiang
+![WeiWei setup](Screenshot/WeiWeiSetup.png)
 
 ### Chinyere Nwosu
 ![Chinyere Setup 1](Screenshot/chinyereloadingdata.png)
