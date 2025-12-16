@@ -43,6 +43,7 @@ group project
 ![Wan setup](Screenshot/WanSetup.png)
 
 ### Yu Lin
+![Yu Lin setup](Screenshot/yulinSetup.png)
 
 ### Wei Wei Jiang
 ![WeiWei setup](Screenshot/WeiWeiSetup.png)
